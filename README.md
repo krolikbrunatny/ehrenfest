@@ -16,6 +16,7 @@
 2. **Install dependencies:**
    ```sh
    npm install
+   cargo build
    ```
    
 3. **Start the development server:**
