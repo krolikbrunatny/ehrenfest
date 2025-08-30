@@ -1,0 +1,15 @@
+{
+  "name": "ehrenfest-dev",
+  "version": "1.0.0",
+  "description": "Development environment for Ehrenfest WASM project",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build:wasm && http-server web -p 8000 -c-1 --cors",
+    "build:wasm": "npx wasm-pack build --target web --out-dir web/pkg"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1",
+    "wasm-pack": "0.13.1"
+  },
+  "dependencies": {}
+}
