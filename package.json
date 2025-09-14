@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "start": "npm run build:wasm && http-server web -p 8000 -c-1 --cors",
-    "build:wasm": "npx wasm-pack build --target web --out-dir web/pkg"
+    "build:wasm": "npx wasm-pack build --target web --out-dir web/pkg",
+    "build": "npm run build:wasm && cp -r web dist"
   },
   "devDependencies": {
     "http-server": "14.1.1",
