@@ -1,6 +1,7 @@
 # Ehrenfest
 
 Final project for the `Programming and Numerical Methods` course.
+
 Description (in Polish): [https://www.fuw.edu.pl/~bzglinicki/teaching/pmn/projekt/1/](https://www.fuw.edu.pl/~bzglinicki/teaching/pmn/projekt/1/)
 
 **Live Demo**: [https://krolikbrunatny.github.io/ehrenfest/](https://krolikbrunatny.github.io/ehrenfest/)
