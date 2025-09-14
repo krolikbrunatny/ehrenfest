@@ -40,9 +40,6 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build WebAssembly
-      run: npm run build:wasm
-
     - name: Build for production
       run: npm run build
 
