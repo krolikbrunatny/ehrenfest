@@ -1,7 +1,6 @@
 {
   "name": "ehrenfest-dev",
   "version": "1.0.0",
-  "description": "Development environment for Ehrenfest WASM project",
   "type": "module",
   "scripts": {
     "start": "npm run build:wasm && http-server web -p 8000 -c-1 --cors",

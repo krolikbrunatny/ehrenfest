@@ -3,10 +3,59 @@
 <head>
     <meta charset="utf-8">
     <title>Ehrenfest</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ehrenfest</h1>
-    <div id="output">Loading...</div>
+    <div class="main-container">
+        <h1>"Ehrenfest Theorem"</h1>
+
+        <div class="controls-container">
+            <div class="controls-grid">
+                <div class="control-item">
+                    <label for="param-x0">Initial Position (x₀) <span id="val-x0">80.00</span></label>
+                    <input type="range" id="param-x0" min="10" max="90" value="80" step="1">
+                </div>
+                 <div class="control-item">
+                    <label for="param-sigma">Wavepacket Width (σ) <span id="val-sigma">5.00</span></label>
+                    <input type="range" id="param-sigma" min="1" max="15" value="5" step="0.5">
+                </div>
+                <div class="control-item">
+                    <label for="param-f">Force (F) <span id="val-f">0.20</span></label>
+                    <input type="range" id="param-f" min="0.05" max="1.0" value="0.2" step="0.05">
+                </div>
+                <div class="control-item">
+                    <label for="param-m">Spatial Intervals (M) <span id="val-m">500</span></label>
+                    <input type="range" id="param-m" min="200" max="1000" value="500" step="50">
+                </div>
+                <div class="control-item">
+                    <label for="param-k">Time Steps (K) <span id="val-k">1000</span></label>
+                    <input type="range" id="param-k" min="200" max="2000" value="1000" step="100">
+                </div>
+                 <div class="control-item">
+                    <label for="param-l">Box Length (L) <span id="val-l">100.00</span></label>
+                    <input type="range" id="param-l" min="50" max="200" value="100" step="10" disabled>
+                </div>
+            </div>
+            <div class="button-container">
+                <button id="run-button">Calculate</button>
+                <p id="status-message"></p>
+            </div>
+        </div>
+        
+        <div id="plots-container">
+            <div class="chart-container">
+                <canvas id="quantumChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="classicalChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="differenceChart"></canvas>
+            </div>
+        </div>
+    </div>
+
     <script type="module" src="./index.js"></script>
 </body>
 </html>
